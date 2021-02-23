@@ -1,4 +1,4 @@
-const app = require("../app.js");
+const {app, server} = require("../app.js");
 const chai = require("chai");
 const request = require("supertest");
 const expect = chai.expect;
@@ -56,4 +56,9 @@ describe("Generate file with random objects", function () {
         done();
       });
   });
+  
+  it("Kill server", () => {
+    server.close();
+  });
+  
 });
