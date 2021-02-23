@@ -22,4 +22,6 @@ jobs:
       - name: Build Dependencies
         run: yarn
       - name: Run Tests
-        run: yarn test
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: test 
